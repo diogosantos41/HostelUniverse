@@ -1,4 +1,4 @@
-package com.dscoding.hosteluniverse.core.presentation.ui.theme
+package com.dscoding.hosteluniverse.core.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

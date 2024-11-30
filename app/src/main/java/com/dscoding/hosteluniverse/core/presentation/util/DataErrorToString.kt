@@ -1,4 +1,4 @@
-package com.dscoding.hosteluniverse.core.presentation
+package com.dscoding.hosteluniverse.core.presentation.util
 
 import com.dscoding.hosteluniverse.R
 import com.dscoding.hosteluniverse.core.domain.DataError

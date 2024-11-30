@@ -1,4 +1,4 @@
-package com.dscoding.hosteluniverse.core.presentation
+package com.dscoding.hosteluniverse.core.presentation.util
 
 import android.content.Context
 import androidx.annotation.StringRes

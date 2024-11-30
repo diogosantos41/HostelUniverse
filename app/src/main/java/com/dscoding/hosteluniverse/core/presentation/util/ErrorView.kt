@@ -1,4 +1,4 @@
-package com.dscoding.hosteluniverse.core.presentation
+package com.dscoding.hosteluniverse.core.presentation.util
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,7 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.dscoding.hosteluniverse.core.presentation.ui.theme.HostelUniverseTheme
+import com.dscoding.hosteluniverse.core.presentation.theme.HostelUniverseTheme
 
 @Composable
 fun ErrorView(errorMessage: String, modifier: Modifier = Modifier) {

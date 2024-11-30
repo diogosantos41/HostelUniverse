@@ -15,6 +15,8 @@ hilt = "2.52"
 hiltNavigationCompose = "1.2.0"
 ksp = "2.0.20-1.0.25"
 compose-material-icons-extended = "1.7.5"
+datastore = "1.1.1"
+navigationCompose = "2.8.0-alpha10"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,7 +47,9 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
 compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "compose-material-icons-extended" }
-
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+datastore-core = { module = "androidx.datastore:datastore-core", version.ref = "datastore" }
+jetbrains-compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref= "navigationCompose"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -64,7 +68,8 @@ compose = [
     "androidx-ui",
     "androidx-ui-graphics",
     "androidx-ui-tooling-preview",
-    "compose-material-icons-extended"
+    "compose-material-icons-extended",
+    "jetbrains-compose-navigation"
 ]
 compose-debug = [
     "androidx-ui-tooling",
