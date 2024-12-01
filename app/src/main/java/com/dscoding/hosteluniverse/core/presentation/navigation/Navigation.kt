@@ -6,8 +6,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.dscoding.hosteluniverse.properties.domain.model.Property
+import com.dscoding.hosteluniverse.properties.presentation.model.PropertyUi
 import com.dscoding.hosteluniverse.properties.presentation.property_details.PropertyDetailScreenRoot
 import com.dscoding.hosteluniverse.properties.presentation.property_list.PropertyListScreenRoot
+import kotlin.reflect.typeOf
 
 @Composable
 fun Navigation(
@@ -23,19 +26,19 @@ fun Navigation(
         composable<PropertyListRoute> {
             PropertyListScreenRoot(
                 OnPropertyClick = {
-                    navController.navigate(PropertyDetailRoute(property = "0"))
+                    navController.navigate(PropertyDetailRoute(it))
                 },
             )
         }
 
         composable<PropertyDetailRoute>(
-          //  typeMap = mapOf(
-             //   typeOf<Property>() to CustomNavType.PropertyType
-            //)
+           typeMap = mapOf(
+                typeOf<PropertyUi>() to CustomNavType.PropertyUiType
+            )
         ) {
             val args = it.toRoute<PropertyDetailRoute>()
             PropertyDetailScreenRoot(
-              //  property = args.property,
+                property = args.property,
                 onBackClick = { navController.navigateUp() }
             )
         }

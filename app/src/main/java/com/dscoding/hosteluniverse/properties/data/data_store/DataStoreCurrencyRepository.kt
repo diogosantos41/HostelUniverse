@@ -16,13 +16,13 @@ class DataStoreCurrencyRepository(private val dataStore: DataStore<Preferences>)
         val CURRENCY_KEY = stringPreferencesKey("currency")
     }
 
-    override fun getCurrency(): Flow<String> {
+    override fun getSelectedCurrency(): Flow<String> {
         return dataStore.data.map { preferences ->
             preferences[CURRENCY_KEY] ?: ""
         }
     }
 
-    override suspend fun setCurrency(currency: String) {
+    override suspend fun selectCurrency(currency: String) {
         dataStore.edit { preferences ->
             preferences[CURRENCY_KEY] = currency
         }

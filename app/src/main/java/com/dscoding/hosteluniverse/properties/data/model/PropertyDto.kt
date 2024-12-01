@@ -6,6 +6,7 @@ import kotlinx.serialization.Serializable
 data class PropertyDto(
     val id: Int,
     val name: String,
+    val overview: String,
     val overallRating: OverallRatingDto,
     val lowestPricePerNight: PricePerNightDto
 )
