@@ -6,4 +6,5 @@
     <string name="error_unknown">Something went wrong.</string>
     <string name="error_request_timeout">The request timed out.</string>
     <string name="error_too_many_requests">Oops, too many requests.</string>
+    <string name="empty_list">There are not properties to display.</string>
 </resources>

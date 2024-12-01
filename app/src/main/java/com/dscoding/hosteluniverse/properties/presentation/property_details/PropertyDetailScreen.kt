@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.dscoding.hosteluniverse.properties.presentation.model.PropertyUi
 
 @Composable
-fun PropertyDetailScreenRoot(property: PropertyUi, onBackClick: () -> Boolean) {
+fun PropertyDetailScreenRoot(property: PropertyUi, onBackClick: () -> Unit) {
     PropertyDetailScreen()
 }
 
