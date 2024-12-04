@@ -1,8 +1,8 @@
-package com.dscoding.hosteluniverse.core.data
+package com.dscoding.hosteluniverse.core.data.utils
 
 import com.dscoding.hosteluniverse.BuildConfig
-import com.dscoding.hosteluniverse.core.domain.DataError
-import com.dscoding.hosteluniverse.core.domain.Result
+import com.dscoding.hosteluniverse.core.domain.utils.DataError
+import com.dscoding.hosteluniverse.core.domain.utils.Result
 import io.ktor.client.call.body
 import io.ktor.client.statement.HttpResponse
 import io.ktor.util.network.UnresolvedAddressException

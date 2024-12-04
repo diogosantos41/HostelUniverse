@@ -9,8 +9,8 @@ data class LocationDto(
 
 @Serializable
 data class CityDto(
-    val id: Long,
+    val id: Int,
     val name: String,
-    val idCountry: Long,
+    val idCountry: Int,
     val country: String
 )

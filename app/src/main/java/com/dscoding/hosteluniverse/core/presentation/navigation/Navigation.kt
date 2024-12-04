@@ -6,7 +6,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.dscoding.hosteluniverse.properties.domain.model.Property
 import com.dscoding.hosteluniverse.properties.presentation.model.PropertyUi
 import com.dscoding.hosteluniverse.properties.presentation.property_details.PropertyDetailScreenRoot
 import com.dscoding.hosteluniverse.properties.presentation.property_list.PropertyListScreenRoot
@@ -25,7 +24,7 @@ fun Navigation(
     ) {
         composable<PropertyListRoute> {
             PropertyListScreenRoot(
-                OnPropertyClick = {
+                onPropertyClick = {
                     navController.navigate(PropertyDetailRoute(it))
                 },
             )

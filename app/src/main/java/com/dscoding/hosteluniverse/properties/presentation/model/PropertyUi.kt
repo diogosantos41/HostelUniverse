@@ -8,6 +8,7 @@ data class PropertyUi(
     val id: Int,
     val name: String,
     val overview: String,
+    val isFeatured: Boolean,
     val lowestPricePerNight: String,
     val location: String,
     val rating: String,
@@ -19,9 +20,10 @@ fun Property.toPropertyUi() : PropertyUi {
         id = id,
         name = name,
         overview = overview,
-        lowestPricePerNight = lowestPricePerNight.value,
+        isFeatured = isFeatured,
+        lowestPricePerNight = "€ " + lowestPricePerNight.value,
         location = "${location.name}, ${location.country}",
-        rating = overallRating.overall.toString(),
+        rating = (overallRating.overall.toDouble() / 10).toString(),
         numberOfRatings = overallRating.numberOfRatings
     )
 }

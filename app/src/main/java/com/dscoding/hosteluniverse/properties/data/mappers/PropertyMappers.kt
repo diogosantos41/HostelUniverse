@@ -28,6 +28,7 @@ fun PropertyDto.toProperty(location: LocationDto): Property {
         id = id,
         name = name,
         overview = overview,
+        isFeatured = isFeatured,
         location = location.toLocation(),
         overallRating = overallRating.toOverallRating(),
         lowestPricePerNight = lowestPricePerNight.toPricePerNight()

@@ -1,4 +1,4 @@
-package com.dscoding.hosteluniverse.core.domain
+package com.dscoding.hosteluniverse.core.domain.utils
 
 enum class DataError : Error {
     REQUEST_TIMEOUT,

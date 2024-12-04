@@ -1,4 +1,4 @@
-package com.dscoding.hosteluniverse.core.data
+package com.dscoding.hosteluniverse.core.data.utils
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine

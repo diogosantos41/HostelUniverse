@@ -1,7 +1,7 @@
 package com.dscoding.hosteluniverse.core.presentation.util
 
 import com.dscoding.hosteluniverse.R
-import com.dscoding.hosteluniverse.core.domain.DataError
+import com.dscoding.hosteluniverse.core.domain.utils.DataError
 
 fun DataError.toUiText(): UiText {
     return when (this) {

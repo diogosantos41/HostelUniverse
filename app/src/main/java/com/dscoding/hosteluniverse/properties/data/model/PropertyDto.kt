@@ -7,13 +7,14 @@ data class PropertyDto(
     val id: Int,
     val name: String,
     val overview: String,
+    val isFeatured: Boolean,
     val overallRating: OverallRatingDto,
     val lowestPricePerNight: PricePerNightDto
 )
 
 @Serializable
 data class OverallRatingDto(
-    val overall: Long, val numberOfRatings: String
+    val overall: Int, val numberOfRatings: String
 )
 
 @Serializable

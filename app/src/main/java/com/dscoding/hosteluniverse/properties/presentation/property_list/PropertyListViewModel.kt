@@ -3,8 +3,8 @@ package com.dscoding.hosteluniverse.properties.presentation.property_list
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dscoding.hosteluniverse.R
-import com.dscoding.hosteluniverse.core.domain.onError
-import com.dscoding.hosteluniverse.core.domain.onSuccess
+import com.dscoding.hosteluniverse.core.domain.utils.onError
+import com.dscoding.hosteluniverse.core.domain.utils.onSuccess
 import com.dscoding.hosteluniverse.core.presentation.util.UiText
 import com.dscoding.hosteluniverse.core.presentation.util.toUiText
 import com.dscoding.hosteluniverse.properties.domain.PropertiesDataSource
@@ -27,12 +27,6 @@ class PropertyListViewModel @Inject constructor(private val propertiesDataSource
         loadProperties()
     }
 
-    fun onAction(action: PropertyListAction) {
-        when (action) {
-            is PropertyListAction.OnPropertyClick -> {}
-        }
-    }
-
     private fun loadProperties() {
         viewModelScope.launch {
             _state.update { it.copy(isLoading = true) }
@@ -44,7 +38,7 @@ class PropertyListViewModel @Inject constructor(private val propertiesDataSource
                             it.copy(
                                 isLoading = false,
                                 properties = emptyList(),
-                                errorMessage = UiText.StringResource(id = R.string.empty_list)
+                                errorMessage = UiText.StringResource(id = R.string.error_empty_list)
                             )
                         }
                         return@onSuccess
